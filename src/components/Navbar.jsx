@@ -79,6 +79,7 @@ function Navbar() {
             left-1/2 transform -translate-x-1/2 p-4 
             border rounded-box
             pb-10
+            z-2
             bg-white
             `}>
 

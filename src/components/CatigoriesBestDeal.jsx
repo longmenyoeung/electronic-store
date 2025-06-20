@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
 import { FaHeart, FaStar } from 'react-icons/fa'
 import { IoMdHeartEmpty } from 'react-icons/io'
 function CatigoriesBestDeal() {
+    useEffect(( )=>{
+            AOS.init({
+                duration:1500,
+                delay:150,
+                once: true,
+            });
+        }, []);
     return (
         <div className='w-full '>
             <div className="container px-4 lg:px-[128px] mx-auto py-10">
@@ -16,7 +24,7 @@ function CatigoriesBestDeal() {
                     <button className='border-1 border-gray-500 px-6 rounded-2xl py-2 text-md hover:border-orange-500 hover:bg-orange-500 hover:text-white transition-all cursor-pointer'>Speaker</button>
                 </div>
                 <div className='mb-5 w-full overflow-hidden flex gap-1 lg:gap-6 md:gap-[2%] flex-wrap lg:flex-nowrap'>
-                    <div className='lg:w-[24%] h-auto md:w-[49%] w-full mb-5'>
+                    <div className='lg:w-[24%] h-auto md:w-[49%] w-full mb-5' data-aos="fade-up">
                         <div className='relative overflow-hidden  bg-[#f5f0f0] h-[320px] p-4 w-full rounded-lg'>
                             <button className='btn btn-circle absolute end-3 top-3'>
                                 <IoMdHeartEmpty className='text-2xl'/>
@@ -42,7 +50,7 @@ function CatigoriesBestDeal() {
                             py-2 text-md hover:border-orange-500 hover:bg-orange-500 hover:text-white transition-all font-text'>Add to Cart</button>
                     </div>
 
-                    <div className='lg:w-[24%] h-auto md:w-[49%] w-full mb-5'>
+                    <div className='lg:w-[24%] h-auto md:w-[49%] w-full mb-5' data-aos="fade-up">
                         <div className='relative overflow-hidden  bg-[#f5f0f0] h-[320px] p-4 w-full rounded-lg'>
                             <button className='btn btn-circle absolute end-3 top-3'>
                                 <IoMdHeartEmpty className='text-2xl'/>
@@ -68,7 +76,7 @@ function CatigoriesBestDeal() {
                             py-2 text-md hover:border-orange-500 hover:bg-orange-500 hover:text-white transition-all font-text'>Add to Cart</button>
                     </div>
                     
-                    <div className='lg:w-[24%] h-auto md:w-[49%] w-full mb-5'>
+                    <div className='lg:w-[24%] h-auto md:w-[49%] w-full mb-5' data-aos="fade-up">
                         <div className='relative overflow-hidden  bg-[#f5f0f0] h-[320px] p-4 w-full rounded-lg'>
                             <button className='btn btn-circle absolute end-3 top-3'>
                                 <IoMdHeartEmpty className='text-2xl'/>
@@ -94,7 +102,7 @@ function CatigoriesBestDeal() {
                             py-2 text-md hover:border-orange-500 hover:bg-orange-500 hover:text-white transition-all font-text'>Add to Cart</button>
                     </div>
 
-                    <div className='lg:w-[24%] h-auto md:w-[49%] w-full mb-5'>
+                    <div className='lg:w-[24%] h-auto md:w-[49%] w-full mb-5' data-aos="fade-up">
                         <div className='relative overflow-hidden  bg-[#f5f0f0] h-[320px] p-4 w-full rounded-lg'>
                             <button className='btn btn-circle absolute end-3 top-3'>
                                 <IoMdHeartEmpty className='text-2xl'/>
@@ -122,7 +130,7 @@ function CatigoriesBestDeal() {
                     
                 </div>
                 <div className='mb-5 w-full overflow-hidden flex gap-1 lg:gap-6 md:gap-[2%] flex-wrap lg:flex-nowrap'>
-                    <div className='lg:w-[24%] h-auto md:w-[49%] w-full mb-5'>
+                    <div className='lg:w-[24%] h-auto md:w-[49%] w-full mb-5' data-aos="fade-up">
                         <div className='relative overflow-hidden  bg-[#f5f0f0] h-[320px] p-4 w-full rounded-lg'>
                             <button className='btn btn-circle absolute end-3 top-3'>
                                 <IoMdHeartEmpty className='text-2xl'/>
@@ -148,7 +156,7 @@ function CatigoriesBestDeal() {
                             py-2 text-md hover:border-orange-500 hover:bg-orange-500 hover:text-white transition-all font-text'>Add to Cart</button>
                     </div>
 
-                    <div className='lg:w-[24%] h-auto md:w-[49%] w-full mb-5'>
+                    <div className='lg:w-[24%] h-auto md:w-[49%] w-full mb-5' data-aos="fade-up">
                         <div className='relative overflow-hidden  bg-[#f5f0f0] h-[320px] p-4 w-full rounded-lg'>
                             <button className='btn btn-circle absolute end-3 top-3'>
                                 <IoMdHeartEmpty className='text-2xl'/>
@@ -174,7 +182,7 @@ function CatigoriesBestDeal() {
                             py-2 text-md hover:border-orange-500 hover:bg-orange-500 hover:text-white transition-all font-text'>Add to Cart</button>
                     </div>
                     
-                    <div className='lg:w-[24%] h-auto md:w-[49%] w-full mb-5'>
+                    <div className='lg:w-[24%] h-auto md:w-[49%] w-full mb-5' data-aos="fade-up">
                         <div className='relative overflow-hidden  bg-[#f5f0f0] h-[320px] p-4 w-full rounded-lg'>
                             <button className='btn btn-circle absolute end-3 top-3'>
                                 <IoMdHeartEmpty className='text-2xl'/>
@@ -200,7 +208,7 @@ function CatigoriesBestDeal() {
                             py-2 text-md hover:border-orange-500 hover:bg-orange-500 hover:text-white transition-all font-text'>Add to Cart</button>
                     </div>
 
-                    <div className='lg:w-[24%] h-auto md:w-[49%] w-full mb-5'>
+                    <div className='lg:w-[24%] h-auto md:w-[49%] w-full mb-5' data-aos="fade-up">
                         <div className='relative overflow-hidden  bg-[#f5f0f0] h-[320px] p-4 w-full rounded-lg'>
                             <button className='btn btn-circle absolute end-3 top-3'>
                                 <IoMdHeartEmpty className='text-2xl'/>

@@ -1,10 +1,18 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
+import AOS from 'aos';
 import { IoMdHeartEmpty } from 'react-icons/io'
 import Skelaton from './Skelaton';
 import ProductContext from '../store/ProductContext';
 
 function PopularProduct() {
-    const {items,isLoading}  = useContext(ProductContext)  
+    const {items,isLoading}  = useContext(ProductContext)
+    useEffect(( )=>{
+            AOS.init({
+                duration:1500,
+                delay:150,
+                once: true,
+            });
+        }, []);
     return (
     <div className='w-full mt-4 lg:mt-24'>
         <div className="container px-4 lg:px-[128px] mx-auto">
@@ -23,7 +31,7 @@ function PopularProduct() {
                         (            
                         items.map((v,i)=>{
                             return(
-                                <div key={i} className='w-[49%] md:w-[32%] shrink-0'>
+                                <div key={i} className='w-[49%] md:w-[32%] shrink-0' data-aos="fade-down">
                                     <div className="w-full h-[350px] rounded-lg overflow-hidden relative">
                                         <button className='btn btn-circle absolute end-3 top-3'>
                                             <IoMdHeartEmpty className='text-2xl'/>

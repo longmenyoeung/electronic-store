@@ -1,12 +1,20 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import AOS from 'aos';
 function GetDiscount() {
-  return (
+    useEffect(( )=>{
+            AOS.init({
+                duration:1500,
+                delay:150,
+                once: true,
+            });
+        }, []);
+    return (
     <div className='w-full mt-4 lg:mt-24'>
         <div className="container px-4 lg:px-[128px] mx-auto">
             <h1 className='text-3xl font-bold mb-5'>Get Up to 70% off</h1>
 
             <div className="flex flex-wrap justify-between">
-                <div className='my-3 sm:w-[48%] lg:w-[24%] bg-yellow-100 rounded-xl overflow-hidden'>
+                <div className='my-3 sm:w-[48%] lg:w-[24%] bg-yellow-100 rounded-xl overflow-hidden' data-aos="fade-down">
                     <div className='p-8'>  
                         <p className='text-3xl font-bold mb-3'>Save</p>
                         <p className='text-5xl font-bold text-yellow-500'><sup>$</sup>100</p>
@@ -17,7 +25,7 @@ function GetDiscount() {
                     </div>
                 </div>
 
-                <div className='my-3 sm:w-[48%] lg:w-[24%] bg-red-100 rounded-xl overflow-hidden'>
+                <div className='my-3 sm:w-[48%] lg:w-[24%] bg-red-100 rounded-xl overflow-hidden' data-aos="fade-down">
                     <div className='p-8'>  
                         <p className='text-3xl font-bold mb-3'>Save</p>
                         <p className='text-5xl font-bold text-red-500'><sup>$</sup>29</p>
@@ -28,7 +36,7 @@ function GetDiscount() {
                     </div>
                 </div>
 
-                <div className='my-3 sm:w-[48%] lg:w-[24%] bg-pink-100 rounded-xl overflow-hidden'>
+                <div className='my-3 sm:w-[48%] lg:w-[24%] bg-pink-100 rounded-xl overflow-hidden' data-aos="fade-down">
                     <div className='p-8'>  
                         <p className='text-3xl font-bold mb-3'>Save</p>
                         <p className='text-5xl font-bold text-pink-500'><sup>$</sup>50</p>
@@ -39,7 +47,7 @@ function GetDiscount() {
                     </div>
                 </div>
 
-                <div className='my-3 sm:w-[48%] lg:w-[24%] bg-blue-100 rounded-xl overflow-hidden'>
+                <div className='my-3 sm:w-[48%] lg:w-[24%] bg-blue-100 rounded-xl overflow-hidden' data-aos="fade-down">
                     <div className='p-8'>  
                         <p className='text-3xl font-bold mb-3'>Save</p>
                         <p className='text-5xl font-bold text-blue-500'><sup>$</sup>79</p>
@@ -52,7 +60,7 @@ function GetDiscount() {
             </div>
         </div>
     </div>
-  )
+    )
 }
 
 export default GetDiscount

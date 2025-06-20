@@ -1,16 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaComputer, FaPhone } from 'react-icons/fa6'
 import { LuClub } from 'react-icons/lu'
 import { MdDesignServices, MdDone, MdManageAccounts } from 'react-icons/md'
 import { SiConsul, SiCyberdefenders } from 'react-icons/si'
-
+import AOS from 'aos'
 function ServicesPage() {
+    useEffect(()=>{
+        AOS.init({
+            duration:1500,
+            delay:150,
+            once:true
+        })
+    })
     return (
         <div>
             <div className='container lg:px-[128px] mx-auto flex mt-5 
                         h-full items-center justify-between px-4 flex-wrap lg:flex-nowrap md:flex-nowrap
                         '>
-                <div className='flex flex-col gap-3 md:gap-4'>
+                <div className='flex flex-col gap-3 md:gap-4' data-aos="fade-right">
                     <h1 className='lg:text-[54px] font-text font-bold text-sw
                             md:text-[34px] text-[32px]'>
                         Hello Guys! <br />What can i help you!!
@@ -24,7 +31,7 @@ function ServicesPage() {
                             Read More</button>
                         </div>
                 </div>
-                <div className='lg:h-[100%] md:h-[80%] lg:w-[1200px] md:w-[1000px] w-[100%] h-[350px]'>
+                <div className='lg:h-[100%] md:h-[80%] lg:w-[1200px] md:w-[1000px] w-[100%] h-[350px]' data-aos="fade-left">
                     <img src="services.png" alt="" 
                     className='h-full w-full object-center'/>
                 </div>
@@ -41,7 +48,9 @@ function ServicesPage() {
 
                 {/* box work */}
                 <div className='w-[100%] mt-10 flex gap-[2%] flex-wrap'>
-                    <div className='lg:w-[32%] mt-6 md:w-[48%] w-[100%] bg-[#f1eeee] bg-sw hover:translate-x-[10px] hover:translate-y-[-10px] transition-all rounded-xl p-10 flex flex-col gap-3'>
+                    <div className='lg:w-[32%] mt-6 md:w-[48%] w-[100%] bg-[#f1eeee] 
+                    bg-sw hover:translate-x-[10px] hover:translate-y-[-10px] transition-all rounded-xl p-10 
+                    flex flex-col gap-3' data-aos="fade-up">
                         <div className='bg-black p-2 rounded-full w-[50px] h-[50px]'><SiCyberdefenders className='text-[32px] text-orange-600'/></div>
                         <h2 className='font-bold text-[24px] text-indigo-900 font-text'>Cyber Security Defenders</h2>
                         <p className='text-gray-500 text-[14px]'>
@@ -49,7 +58,9 @@ function ServicesPage() {
                         </p>
                     </div>
 
-                    <div className='lg:w-[32%] mt-6 md:w-[48%] w-[100%] bg-[#443333] bg-sw hover:translate-x-[5px] hover:translate-y-[-10px] transition-all rounded-xl p-10 flex flex-col gap-3'>
+                    <div className='lg:w-[32%] mt-6 md:w-[48%] w-[100%] bg-[#443333] 
+                    bg-sw hover:translate-x-[5px] hover:translate-y-[-10px] transition-all rounded-xl p-10 
+                    flex flex-col gap-3' data-aos="fade-up">
                         <div className='bg-black p-2 rounded-full w-[50px] h-[50px]'><MdManageAccounts className='text-[32px] text-orange-600'/></div>
                         <h2 className='font-bold text-[24px] text-indigo-900 font-text'>IT Management</h2>
                         <p className='text-gray-500 text-[14px]'>
@@ -57,7 +68,9 @@ function ServicesPage() {
                         </p>
                     </div>
 
-                    <div className='lg:w-[32%] mt-6 md:w-[48%] w-[100%] bg-[#ca8b8b] bg-sw hover:translate-x-[5px] hover:translate-y-[-10px] transition-all rounded-xl p-10 flex flex-col gap-3'>
+                    <div className='lg:w-[32%] mt-6 md:w-[48%] w-[100%] bg-[#ca8b8b] 
+                    bg-sw hover:translate-x-[5px] hover:translate-y-[-10px] transition-all rounded-xl p-10 
+                    flex flex-col gap-3' data-aos="fade-up">
                         <div className='bg-black p-2 rounded-full w-[50px] h-[50px]'><SiConsul className='text-[32px] text-orange-600'/></div>
                         <h2 className='font-bold text-[24px] text-indigo-900 font-text'>IT Consultstancy</h2>
                         <p className='text-gray-500 text-[14px]'>
@@ -65,7 +78,9 @@ function ServicesPage() {
                         </p>
                     </div>
 
-                    <div className='lg:w-[32%] md:w-[48%] w-[100%] mt-6 bg-[#2f224e] bg-sw hover:translate-x-[5px] hover:translate-y-[-10px] transition-all rounded-xl p-10 flex flex-col gap-3'>
+                    <div className='lg:w-[32%] md:w-[48%] w-[100%] mt-6 bg-[#2f224e] 
+                    bg-sw hover:translate-x-[5px] hover:translate-y-[-10px] transition-all rounded-xl p-10 
+                    flex flex-col gap-3' data-aos="fade-up">
                         <div className='bg-black p-2 rounded-full w-[50px] h-[50px]'><MdDesignServices className='text-[32px] text-orange-600'/></div>
                         <h2 className='font-bold text-[24px] text-indigo-900 font-text'>UX UI Designer</h2>
                         <p className='text-gray-500 text-[14px]'>
@@ -73,14 +88,18 @@ function ServicesPage() {
                         </p>
                     </div>
 
-                    <div className='lg:w-[32%] md:w-[48%] w-[100%] mt-6 bg-[#aea9b9] bg-sw hover:translate-x-[5px] hover:translate-y-[-10px] transition-all rounded-xl p-10 flex flex-col gap-3'>
+                    <div className='lg:w-[32%] md:w-[48%] w-[100%] mt-6 bg-[#aea9b9] 
+                    bg-sw hover:translate-x-[5px] hover:translate-y-[-10px] transition-all rounded-xl p-10 
+                    flex flex-col gap-3' data-aos="fade-up">
                         <div className='bg-orange-600 p-2 rounded-full w-[50px] h-[50px]'><LuClub className='text-[32px] text-white'/></div>
                         <h2 className='font-bold text-[24px] text-indigo-900 font-text'>Cluad Computing</h2>
                         <p className='text-gray-500 text-[14px]'>
                             We create visually stunning, clean, and consistent interfaces that reflect your brand identity and enhance usability—across web, mobile, and apps.
                         </p>
                     </div>
-                    <div className='lg:w-[32%] md:w-[48%] w-[100%] mt-6 bg-[#15131d] bg-sw hover:translate-x-[5px] hover:translate-y-[-10px] transition-all rounded-xl p-10 flex flex-col gap-3'>
+                    <div className='lg:w-[32%] md:w-[48%] w-[100%] mt-6 bg-[#15131d] 
+                    bg-sw hover:translate-x-[5px] hover:translate-y-[-10px] transition-all rounded-xl p-10 
+                    flex flex-col gap-3' data-aos="fade-up">
                         <div className='bg-orange-600 p-2 rounded-full w-[50px] h-[50px]'><FaComputer className='text-[32px] text-white'/></div>
                         <h2 className='font-bold text-[24px] text-indigo-900 font-text'>Software Development</h2>
                         <p className='text-gray-500 text-[14px]'>
@@ -101,7 +120,7 @@ function ServicesPage() {
 
                 <div className='w-[100%] flex flex-wrap gap-[2%]'>
                     <div className='lg:w-[32%] md:w-[48%] mb-5 w-[100%] bg-[#161b24] p-10 rounded-2xl hover:translate-x-[10px] 
-                        hover:translate-y-[-15px] transition-all'>
+                        hover:translate-y-[-15px] transition-all' data-aos="fade-up">
                         <span className='text-white text-[24px] font-bold'>Basic Plan</span>
                         <p className='text-orange-600 font-bold text-[32px]'>$500/ <span className='text-white text-[16px] font-normal'>project</span> </p>
 
@@ -131,7 +150,7 @@ function ServicesPage() {
                     </div>
 
                     <div className='lg:w-[32%] mb-5 md:w-[48%] w-[100%] bg-[#d9dee7] p-10 rounded-2xl hover:translate-x-[10px] 
-                        hover:translate-y-[-15px] transition-all'>
+                        hover:translate-y-[-15px] transition-all' data-aos="fade-up">
                         <span className='text-black font-bold text-[24px]'>Premium Plan</span>
                         <p className='text-orange-600 font-bold text-[32px]'>$1000/ <span className='text-[#0e0303] text-[16px] font-normal'>project</span> </p>
 
@@ -161,7 +180,7 @@ function ServicesPage() {
                     </div>
 
                     <div className='lg:w-[32%] md:w-[48%] w-[100%] bg-[#d9dee7] p-10 rounded-2xl hover:translate-x-[10px] 
-                        hover:translate-y-[-15px] transition-all'>
+                        hover:translate-y-[-15px] transition-all' data-aos="fade-up">
                         <span className='text-black font-bold text-[24px]'>Corporate Plan</span>
                         <p className='text-orange-600 font-bold text-[32px]'>$1500/ <span className='text-[#0e0303] text-[16px] font-normal'>project</span> </p>
 
@@ -195,22 +214,22 @@ function ServicesPage() {
             {/* hero can i help u */}
             <div className='my-5 bg-amber-500 '>
                 <div className='flex items-center justify-center w-[100%] lg:gap-[5%] lg:p-[10px] p-[10px]  md:gap-[5%]'>
-                    <div className='w-[40%] lg:h-[550px] hidden lg:block md:block'>
+                    <div className='w-[40%] lg:h-[550px] hidden lg:block md:block' data-aos="fade-right">
                         <img src="manfix.png" 
                         alt="" className='w-full h-full object-center'/>
                     </div>
                     <div className='h-[50%] flex flex-col gap-5'>
-                        <h1 className='font-text font-bold lg:text-6xl text-white text-4xl md:text-5xl'>Having a Problem <br />
+                        <h1 className='font-text font-bold lg:text-6xl text-white text-4xl md:text-5xl' data-aos="fade-left">Having a Problem <br />
                             We'll  Fixed it Today !
                         </h1>
-                        <p className='text-2xl text-white text-[16px]'>Lorem ipsum dolor sit amet consectetur   adipisicing elit. Voluptate, eum?</p>
+                        <p className='text-2xl text-white text-[16px]' data-aos="fade-left">Lorem ipsum dolor sit amet consectetur   adipisicing elit. Voluptate, eum?</p>
                         <div className='flex justify-between'>
-                            <div className='flex gap-2 items-center'>
+                            <div className='flex gap-2 items-center' data-aos="fade-right">
                                 <span><FaPhone className='text-orange-600 text-[24px]'/></span>
                                 <p className='text-[18px] text-[#fff]'>(+855) 939 330 8333</p>
                             </div>
                             <button className='btn bg-orange-600 lg:px-10 lg:py-6 text-[18px] 
-                            text-white font-text rounded-4xl hover:bg-transparent transition-all'>Call Me</button>
+                            text-white font-text rounded-4xl hover:bg-transparent transition-all' data-aos="fade-left">Call Me</button>
                         </div>
                     </div>
                 </div>

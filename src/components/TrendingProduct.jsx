@@ -1,6 +1,14 @@
-import React from 'react'
+import React,{useEffect} from 'react'
+import AOS from 'aos'
 
 function TrendingProduct() {
+    useEffect(( )=>{
+            AOS.init({
+                duration:1500,
+                delay:150,
+                once: true,
+            });
+        }, []);
     return (
         <div className='w-full mt-5 lg:mt-24 mb-5'>
             <div className='container px-4 lg:px-[128px] mx-auto'>
@@ -10,7 +18,7 @@ function TrendingProduct() {
                     flex-wrap
                 '>
 
-                    <div className='bg-[#f5f0f0] w-[100%] lg:w-[49%] rounded-xl md:w-[49%] h-[480px] overflow-hidden mb-5'>
+                    <div className='bg-[#f5f0f0] w-[100%] lg:w-[49%] rounded-xl md:w-[49%] h-[480px] overflow-hidden mb-5' data-aos="fade-up">
                         <div className='w-full h-[65%] overflow-hidden'>
                             <img src="https://assets-global.website-files.com/63e857eaeaf853471d5335ff/63e8c4e6cd3678e82164f755_furniture%20village-min.png" 
                                 alt="" className='w-full h-full object-cover rounded-t-xl hover:scale-150 duration-300 transition-all'/>
@@ -25,7 +33,7 @@ function TrendingProduct() {
                         
                     </div>
                     
-                    <div className='bg-[#f5f0f0] w-[100%] lg:w-[49%] md:w-[49%] rounded-xl h-[480px] overflow-hidden'>
+                    <div className='bg-[#f5f0f0] w-[100%] lg:w-[49%] md:w-[49%] rounded-xl h-[480px] overflow-hidden'  data-aos="fade-up">
                         <div className='w-full h-[65%] overflow-hidden'>
                             <img src="https://assets-global.website-files.com/63e857eaeaf853471d5335ff/63e8c4e6037f3b456acf2024_Fashion%20world-min.png" 
                                 alt="" className='w-full h-full object-cover rounded-t-xl hover:scale-150 duration-300 transition-all'/>

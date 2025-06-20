@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BiLogoFacebookCircle, BiLogoInstagram, BiPhone } from 'react-icons/bi'
 import { CgMail } from 'react-icons/cg'
 import { FaLocationDot, FaYoutube } from 'react-icons/fa6'
-
+import AOS from 'aos'
 function ContactHero() {
+    useEffect(()=>{
+        AOS.init({
+            duration:1500,
+            delay:150,
+            once:true
+        })
+    })
     return (
         <div className=''>
             <div className='container lg:px-[128px] mx-auto flex 
                         h-full items-center justify-between px-4 flex-wrap lg:flex-nowrap md:flex-nowrap'>
-                <div className='flex flex-col gap-3 md:gap-4'>
+                <div className='flex flex-col gap-3 md:gap-4' data-aos="fade-right">
                     <h1 className='lg:text-[54px] font-text font-bold text-sw
                             md:text-[34px] text-[32px]'>
                         Hello Guys! <br />Welcome to see Contact US!!
@@ -24,7 +31,7 @@ function ContactHero() {
                 </div>
                 <div className='lg:h-[100%] md:h-[80%] lg:w-[850px] md:w-[850px] w-[100%] h-[350px]'>
                     <img src="con-hero.png" alt="" 
-                    className='h-full w-full object-center'/>
+                    className='h-full w-full object-center' data-aos="fade-left" />
                 </div>
             </div>
 

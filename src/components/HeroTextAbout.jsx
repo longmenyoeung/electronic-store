@@ -1,22 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaFacebook, FaHandHoldingUsd, FaInstagram, FaNapster, FaTwitter, FaYoutube } from "react-icons/fa";
 import { SiLinuxprofessionalinstitute } from "react-icons/si";
-
+import AOS from 'aos'
 function HeroTextAbout() {
+    useEffect(() =>{
+        AOS.init({
+            duration:1500,
+            delay:150,
+            once: true
+        })
+    })
     return (
         <div>
             <div className="container lg:px-[128px] px-4 mx-auto">
                 <div className="flex-wrap lg:flex md:flex md:justify-between lg:justify-between w-[100%] mt-5 flex">
-                    <h1 className="text-[34px] font-bold text-orange-600 lg:w-[30%] md:w-[30%] rounded-sm hover:bg-[#f8f0f0] p-3">
+                    <h1 className="text-[34px] font-bold text-orange-600 lg:w-[30%] md:w-[30%] 
+                    rounded-sm hover:bg-[#f8f0f0] p-3" data-aos="fade-down">
                         Introduction <span className="text-indigo-900">To Best</span> <br />
                         <span className="text-indigo-900">Digital Agency!</span>
                     </h1>
-                    <p className="text-[18px] text-gray-700 lg:w-[30%] md:w-[30%] hover:bg-[#f8f0f0] p-3 rounded-sm ">
+                    <p className="text-[18px] text-gray-700 lg:w-[30%] 
+                    md:w-[30%] hover:bg-[#f8f0f0] p-3 rounded-sm " data-aos="fade-down">
                         Welcome to our world of creativity and innovation. At Our SHop, we are
                         passionate about delivering unique and impactful experiences through
                         our work. 
                     </p>
-                    <p className="text-[18px] text-gray-700 lg:w-[30%] md:w-[30%] hover:bg-[#f8f0f0] p-3 rounded-sm">
+                    <p className="text-[18px] text-gray-700 lg:w-[30%] md:w-[30%] 
+                    hover:bg-[#f8f0f0] p-3 rounded-sm" data-aos="fade-down">
                         Founded on the belief that great work starts with great collaboration,
                         our team is dedicated to working closely with clients to understand
                         their vision and turn it into reality.
@@ -25,7 +35,9 @@ function HeroTextAbout() {
 
                 <h1 className="text-center mt-15 text-[40px] font-bold">About Us</h1>
                 <div className="w-[100%] flex justify-between lg:flex-nowrap md:flex-wrap flex-wrap mt-[-30px]">
-                    <div className="flex items-center md:w-[48%] mt-15 gap-3 bg-[#ddd6d6] p-5 rounded-xl lg:w-[30%] bg-sw hover:translate-x-[10px] hover:translate-y-[-10px] transition-all">
+                    <div className="flex items-center md:w-[48%] mt-15 gap-3 bg-[#ddd6d6] 
+                        p-5 rounded-xl lg:w-[30%] bg-sw hover:translate-x-[10px] 
+                        hover:translate-y-[-10px] transition-all" data-aos="fade-right">
                         <div className="w-[50px] p-3 rounded-full h-[50px] flex items-center justify-center bg-orange-600">
                             <FaHandHoldingUsd className="text-white text-[34px]"/>
                         </div>
@@ -35,7 +47,9 @@ function HeroTextAbout() {
                         </div>
                     </div>
 
-                    <div className="flex items-center mt-5 md:mt-15 md:w-[48%] gap-3 bg-[#ddd6d6] p-5 rounded-xl lg:w-[30%]  bg-sw hover:translate-x-[10px] hover:translate-y-[-10px] transition-all">
+                    <div className="flex items-center mt-5 md:mt-15 md:w-[48%] gap-3 
+                        bg-[#ddd6d6] p-5 rounded-xl lg:w-[30%]  bg-sw hover:translate-x-[10px] 
+                        hover:translate-y-[-10px] transition-all" data-aos="fade-down">
                         <div className="w-[50px] p-3 rounded-full h-[50px] flex items-center justify-center bg-black">
                             <FaNapster className="text-white text-[34px]"/>
                         </div>
@@ -45,7 +59,9 @@ function HeroTextAbout() {
                         </div>
                     </div>
 
-                    <div className="flex items-center mt-5 lg:mt-15 md:mt-7 md:w-[48%] gap-3 bg-[#ddd6d6] p-5 rounded-xl lg:w-[30%]  bg-sw hover:translate-x-[10px] hover:translate-y-[-10px] transition-all">
+                    <div className="flex items-center mt-5 lg:mt-15 md:mt-7 md:w-[48%] gap-3 
+                        bg-[#ddd6d6] p-5 rounded-xl lg:w-[30%]  bg-sw hover:translate-x-[10px] 
+                        hover:translate-y-[-10px] transition-all" data-aos="fade-left">
                         <div className="w-[50px] p-3 rounded-full h-[50px] flex items-center justify-center bg-orange-600">
                             <SiLinuxprofessionalinstitute className="text-white text-[34px]"/>
                         </div>
