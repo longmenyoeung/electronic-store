@@ -13,7 +13,7 @@ export const ProductProvide = ({children}) =>{
             // crud
                 try{
                     setisLoading(true)
-                    const res = await axios.get('https://product-server-json.onrender.com/products');
+                    const res = await axios.get('https://data-server-json.onrender.com/products');
                     console.table(res.data);
                     setItems(res.data)
                 }catch(e){
